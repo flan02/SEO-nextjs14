@@ -1,7 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy"
+  title: "Privacy Policy",
+  robots: { // * This will override the one in robots.ts
+    index: false,
+    follow: true
+  }
 }
 
 export default function PrivacyPolicy() {

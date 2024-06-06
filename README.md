@@ -11,6 +11,10 @@ Everything about SEO in nextjs14 with typescript.
 ## GNU image manipulation program
 [GIMP](https://www.gimp.org/)
 
+## Google Search Console
+[https://search.google.com/search-console](https://search.google.com/search-console)
+<!-- Vercel has its own analytics similar to google search -->
+
 ## Website sharing optimization
 [https://socialsharepreview.com/](https://socialsharepreview.com/)
 

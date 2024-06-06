@@ -1,3 +1,4 @@
+import ClapButton from "@/components/ClapButton";
 import { delay } from "@/lib/utils";
 import { BlogPost } from "@/models/BlogPost";
 import { Metadata } from "next";
@@ -63,6 +64,7 @@ export default async function BlogPostPage({ params: { postId } }: BlogPostPageP
     <article className="min-h-[70vh] max-w-prose m-auto space-y-5">
       <h1 className="text-3xl text-center font-bold">{title}</h1>
       <p className="text-lg">{body}</p>
+      <ClapButton /> {/* button rendered in client-side */}
     </article>
   );
 }
