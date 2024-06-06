@@ -3,6 +3,7 @@ Everything about SEO in nextjs14 with typescript.
 
 ## Fake data
 [dummy json](https://dummyjson.com)
+[docs](https://dummyjson.com/docs/posts)
 
 ## Favicon Generator
 [https://realfavicongenerator.net/](https://realfavicongenerator.net/)

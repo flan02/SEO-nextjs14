@@ -37,6 +37,7 @@ export default function AboutPage() {
         <p className="mt-4">Author: &nbsp;&nbsp;&nbsp;</p>
         <Image src={yo} alt="logo" width={60} height={60} className="rounded-full" priority />
       </div>
+      <p className="text-center text-slate-800 font-bold"> &ldquo; In bite a bullet times this blog gives you calm &rdquo;</p>
       <br /><br />
       <div className="text-center">
         <Link href="/" className="text-slate-900 underline hover:text-slate-600">

@@ -2,14 +2,15 @@ import { delay } from "@/lib/utils";
 import { BlogPostsResponse } from "@/models/BlogPost";
 import Link from "next/link";
 
+// TODO - Server-side rendering
 export default async function BlogPage() {
-  const response = await fetch("https://dummyjson.com/posts"); // * Fetching posts from a dummy API
+  const response = await fetch("https://dummyjson.com/posts?limit=50"); // * Fetching posts from a dummy API
   const { posts }: BlogPostsResponse = await response.json();
 
-  await delay(1000);
+  //await delay(1000); // * Simulate network delay
 
   return (
-    <div className="max-w-prose m-auto space-y-5">
+    <div className="min-h-[73vh] max-w-prose m-auto space-y-5">
       <h1 className="text-3xl text-center mb-3 font-bold">Posts</h1>
       {posts.map(({ id, title }) => (
         <article key={title}>
