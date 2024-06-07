@@ -1,9 +1,13 @@
 import ClapButton from "@/components/ClapButton";
 import { delay } from "@/lib/utils";
 import { BlogPost } from "@/models/BlogPost";
+import { bookImages } from "@/models/image";
 import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { cache } from "react";
+import { FaRegThumbsUp } from "react-icons/fa";
+import { FaRegThumbsDown } from "react-icons/fa";
 
 interface BlogPostPageProps {
   params: { postId: string };
@@ -54,17 +58,37 @@ export async function generateMetadata({ params: { postId } }: BlogPostPageProps
 export default async function BlogPostPage({ params: { postId } }: BlogPostPageProps) {
   const response = await fetch(`https://dummyjson.com/posts/${postId}`);
   //console.log(response);
-  const { title, body }: BlogPost = await response.json();
+  let { title, body, imageUrl, reactions }: BlogPost = await response.json();
   if (response.status === 404) {
     notFound();
   }
   //await delay(1000); // ** Simulate network delay
-
+  let index = parseInt(postId) - 1
+  imageUrl = bookImages[index]; // * Replace imageUrl with a random image from bookImages array
   return (
-    <article className="min-h-[70vh] max-w-prose m-auto space-y-5">
-      <h1 className="text-3xl text-center font-bold">{title}</h1>
-      <p className="text-lg">{body}</p>
-      <ClapButton /> {/* button rendered in client-side */}
+    <article className="min-h-[70vh] max-w-prose m-auto space-y-4 bg-emerald-50">
+      <h1 className="text-3xl text-center font-bold bg-white">{title}</h1>
+
+      <div className="h-[300px] relative  ">
+        <Image src={imageUrl} alt={title} fill className="absolute" sizes={"100vw"} style={{
+          objectFit: 'cover'
+        }} />
+      </div>
+      <h6 className="">created at: {
+        new Date().toLocaleString()
+      }</h6>
+      <p className="text-md md:text-lg px-2 ">{body}</p>
+      {/* <ClapButton />  button rendered in client-side */}
+
+      <div className="flex justify-center">
+        <h3 className="font-bold">{reactions.likes}</h3> &nbsp;
+        <FaRegThumbsUp size={20} className="mb-1" /> &nbsp; &nbsp; &nbsp; &nbsp;
+        <FaRegThumbsDown size={20} className="mt-1" /> &nbsp;
+        <h3 className="font-bold">{reactions.dislikes}</h3>
+      </div>
+
+
+
     </article>
   );
 }

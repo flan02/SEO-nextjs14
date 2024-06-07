@@ -3,6 +3,10 @@ export interface BlogPost {
   title: string;
   body: string;
   imageUrl: string;
+  reactions: {
+    likes: number;
+    dislikes: number;
+  }
 }
 
 export interface BlogPostsResponse {
