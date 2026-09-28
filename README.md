@@ -1,27 +1,35 @@
 # SEO-nextjs14
+
 Everything about SEO in nextjs14 with typescript.
 
 ## Fake data
+
 [dummy json](https://dummyjson.com)
 [docs](https://dummyjson.com/docs/posts)
 
 ## Favicon Generator
+
 [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
 
 ## GNU image manipulation program
+
 [GIMP](https://www.gimp.org/)
 
 ## Google Search Console
+
 [https://search.google.com/search-console](https://search.google.com/search-console)
 <!-- Vercel has its own analytics similar to google search -->
 
 ## Website sharing optimization
+
 [https://socialsharepreview.com/](https://socialsharepreview.com/)
 
 ## The easiest way to preview and generate meta tags
+
 [https://www.opengraph.xyz/](https://www.opengraph.xyz/)
 
 ## Expose local services over TLS online (and a pastebin) - testing purposes
+
 [ssh srv.us](https://docs.srv.us/)
 
 <!-- https://2jxbxuv3mi3c2gqmicydntvrca.srv.us/ -->
