@@ -52,3 +52,5 @@ Everything about SEO in nextjs14 with typescript.
 ## Opengraph-image
 
 recommended size 1200x630
+
+## Following next versions 14,15,16,17
